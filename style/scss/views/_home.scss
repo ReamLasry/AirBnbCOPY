@@ -1,0 +1,298 @@
+html {
+    overflow: overlay;
+}
+
+.main-layout {
+    display: grid;
+    grid-template-columns: minmax(2rem, 1fr) minmax(auto, 1100px) minmax(2rem, 1fr);
+}
+
+.main-layout>.full {
+    grid-column: 1/-1;
+}
+
+.main-layout>* {
+    grid-column: 2;
+}
+
+.hero {
+    margin-bottom: 60px;
+    height: 80vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, .123), rgba(0, 0, 0, .178)), url(https://cdn57.androidauthority.net/wp-content/uploads/2019/12/Home-available-on-BoutiqueHomes.jpg);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    // background-attachment: fixed;
+}
+
+.filter-container {
+    display: flex;
+    // justify-content: center;
+    // align-content: center;
+    margin-top: 6vh;
+    cursor: pointer
+}
+
+.scroll-serarch {
+    transform-origin: 50% 0 !important;
+    // transform: scale(.42,.69) translateY(-58px)!important;
+    transition: transform .25s ease, opacity 50ms ease 20ms, visibility 0ms .15s !important
+}
+
+.filter-container .wrapper {
+    border-radius: 50px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.filter-container .wrapper .box {
+    line-height: 18px;
+    padding: 10px;
+    // position: relative;
+    -webkit-padding-start: 24px;
+    padding-inline-start: 24px;
+    margin-top:8px;
+}
+
+
+
+.filter-container .wrapper .box:first-child {
+    // min-width: 250px;
+    width: 250px;
+}
+
+.filter-container .wrapper .box:nth-child(2) {
+    width: 250px;
+}
+
+.filter-container .wrapper .box:nth-child(3) {
+    width: 160px;
+}
+
+.hero .h1-container {
+    line-height: 70px;
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    font-size: 6.5rem;
+    font-weight: 800;
+    color: #fff;
+    justify-content: center;
+    align-items: end;
+    height: 100%;
+
+}
+
+.hero .h1-container h1 {
+    padding: 20px;
+    -webkit-padding-start: 0;
+    padding-inline-start: 0;
+    font-size: 6rem;
+    line-height: 65px;
+    font-family: sans-serif;
+}
+
+.hero .h1-container h1 .dot {
+    color: #ff385c;
+    font-size: 5rem;
+    font-family: serif;
+
+}
+
+.justify-center {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.filter-container .wrapper .box .title {
+    font-weight: 800;
+    line-height: 12px;
+    padding-bottom: 2px;
+    -webkit-padding-end: 60px;
+    padding-inline-end: 60px;
+    font-size: 12px;
+
+}
+
+
+.filter-container .wrapper .box .desc {
+    color: #afafaf;
+    line-height: 36px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    margin-left: 1px;
+}
+
+.filter-container .wrapper .box:first-child:after,
+.filter-container .wrapper .box:nth-child(2):after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 25%;
+    height: 50%;
+}
+
+
+.wrapper {
+    display: flex;
+    height: 65px;
+}
+
+.see-more{
+    display: flex;
+    justify-content: flex-end;
+    margin: -5px 8px 2px 0px;
+    font-size: 13px;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+    color: #afadad;
+    
+}
+
+.dates,
+.guests,
+.location {
+    display: flex;
+    flex-direction: column;
+    padding: 1px 2px;
+    margin-left: 7px;
+}
+
+.dates, .guests{
+    margin-top: 1px;
+}
+
+.box {
+    width: 250px;
+}
+
+.search-icon {
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 10px;
+}
+
+.btn-search {
+    background-color: #ff385c;
+    border-radius: 50%;
+    width: 41px !important;
+    height: 41px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+    margin-bottom: 3px;
+}
+
+.location-header {
+    font-size: 2rem;
+    line-height: 2.25rem;
+    color: #484848;
+    margin-bottom: 35px
+}
+
+.explore-crad {
+    grid: 2;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    flex-direction: row;
+    font-size: 32px;
+    line-height: 36px;
+    color: #222;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.explore-img {
+    width: 330px;
+    height: 220px;
+    border-radius: 13px;
+    cursor: pointer;
+}
+
+.location-txt {
+    font-size: 20px;
+    font-weight: 700;
+    padding: 4px 0px 4px 4px;
+    cursor: pointer;
+    color: #484848;
+}
+
+.router {
+    text-decoration: none;
+    color: rgb(41, 40, 40);
+}
+
+
+.top-location{
+    display: flex;
+    justify-content: space-between;
+    margin: 2px 0px
+}
+
+.home-stay-img{
+    width: 330;
+    height: 220px;
+}
+
+.Populate-header{
+    margin-top: 35px;
+    margin-bottom:25px
+}
+
+
+@media (max-width:400px){
+    .filter-container {
+        margin-bottom: 6vh;
+    }
+
+    .logo-img{
+        margin-left:-20px;
+        margin-top: 0px;
+    }
+
+    .card-container{
+        flex-direction: column;
+    }
+    .top-location{
+        flex-direction: column;
+    }
+    .hero .h1-container {
+        height: 90%;
+    }
+
+    .hero .h1-container h1{
+        font-size: 3rem;
+        line-height: 56px;
+    }
+
+    .hero .h1-container h1 .dot{
+        font-size: 3rem;
+    }
+    .location-txt {
+        font-size: 1.8rem;
+    }
+
+    .explore-img {
+        width:  100% !important;
+    }
+
+    .stay-name-home{
+        font-size: 20px;
+    }
+    .fa-star{
+       font-size: 20px;
+    }
+    .star-txt{
+        font-size: 20px;
+    }
+
+}
